@@ -171,10 +171,6 @@ void main(){
   float glow = v * 0.9;
   col += vec3(glow*0.3, glow*0.2, glow*0.5);
 
-  // vignette
-  float dist = length(uv);
-  col *= smoothstep(0.9, 0.2, dist);
-
   gl_FragColor = vec4(col, 1.0);
 }
 `;
